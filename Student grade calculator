@@ -4,23 +4,23 @@ public class StudentGradeCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Define the number of subjects
+    
         int numberOfSubjects = 5;
         int[] marks = new int[numberOfSubjects];
 
-        // Get the marks for each subject
+        
         System.out.println("Enter the marks for " + numberOfSubjects + " subjects:");
         for (int i = 0; i < numberOfSubjects; i++) {
             System.out.print("Subject " + (i + 1) + ": ");
             marks[i] = scanner.nextInt();
         }
 
-        // Calculate the total marks, average percentage, and grade
+        
         int totalMarks = calculateTotalMarks(marks);
         double averagePercentage = calculateAveragePercentage(totalMarks, numberOfSubjects);
         char grade = calculateGrade(averagePercentage);
 
-        // Display the results
+        
         System.out.println("\nTotal Marks: " + totalMarks);
         System.out.println("Average Percentage: " + averagePercentage + "%");
         System.out.println("Grade: " + grade);
